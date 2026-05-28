@@ -1,0 +1,193 @@
+<style>
+/* SECTION BACKGROUND */
+.bd-section.popular-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+/* HEADING */
+.bd-heading {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.bd-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* CARD (SOFT MINT STYLE) */
+.bd-card {
+  background: #f3fbf8 !important;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e2f1ec;
+  text-decoration: none !important;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* IMAGE */
+.bd-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.bd-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+/* PRICE (FIXED GAP) */
+.deal-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.old-price {
+  font-size: 13px;
+  color: #888;
+  text-decoration: line-through;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.deal-btn {
+  display: inline-block;
+  background: #f59e0b;
+  color: #000;
+  padding: 7px 16px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* BADGES */
+.bd-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.bd-badge.hot {
+  background: rgba(255,82,82,0.12);
+  color: #d32f2f;
+}
+
+.bd-badge.best {
+  background: rgba(255,167,38,0.15);
+  color: #ef6c00;
+}
+
+.bd-badge.trending {
+  background: rgba(66,165,245,0.15);
+  color: #1976d2;
+}
+
+.bd-badge.value {
+  background: rgba(102,187,106,0.15);
+  color: #2e7d32;
+}
+
+/* HOVER */
+.bd-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  background: #ffffff;
+}
+
+/* INFO BAR */
+.deal-info {
+  margin-top: 20px;
+  background: #efe3c7;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .bd-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bd-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+
+<section class="bd-section popular-section no-underline">
+
+  <h2 class="bd-heading">Popular Deals</h2>
+
+  <div class="bd-grid">
+
+    <!-- 1 -->
+      <a href="https://badrideals.com/product/oneplus-nord-ce6-5g/" class="bd-card">
+      <span class="bd-badge hot">Hot Deal</span>
+      <img src="https://badrideals.com/wp-content/uploads/2026/05/oneplus-nord-ce6-lunar-pearl.webp">
+      <h3>OnePlus Nord CE6 5G</h3>
+      <p class="deal-price">Deal Price: ₹30,998</p>
+      <p class="old-price">M.R.P: ₹43,999</p>
+      <span class="deal-btn">View Deal →</span>
+    </a>
+
+    <!-- 2 -->
+   <a href="https://badrideals.com/product/oneplus-15r-5g/" class="bd-card">
+      <span class="bd-badge trending">Best Seller</span>
+      <img src="https://badrideals.com/wp-content/uploads/2026/05/oneplus-15r.jpg">
+      <h3>OnePlus 15R 5G</h3>
+      <p class="deal-price">Deal Price: ₹55,999</p>
+      <p class="old-price">M.R.P: ₹59,999</p>
+      <span class="deal-btn">View Deal →</span>
+    </a>
+
+    <!-- 3 -->
+    <a href="https://badrideals.com/product/sony-bravia-3-series-55-inch-4k-tv-k-55s30b/" class="bd-card">
+      <span class="bd-badge trending">Trending</span>
+      <img src="https://badrideals.com/wp-content/uploads/2026/05/sony-bravia-3-series-55-inch-4k-tv.jpg">
+      <h3>Sony 55 Inch BRAVIA 3</h3>
+      <p class="deal-price">Deal Price: ₹63,490</p>
+      <p class="old-price">M.R.P: ₹1,18,900</p>
+      <span class="deal-btn">View Deal →</span>
+    </a>
+
+    <!-- 4 -->
+    <a href="https://badrideals.com/product/lg-55-inch-4k-uhd-smart-webos-va-led-tv-55nu870bpla/" class="bd-card">
+      <span class="bd-badge value">Best Value</span>
+      <img src="https://badrideals.com/wp-content/uploads/2026/05/lg-55nu870bpla-4k-webos-tv.jpg">
+      <h3>LG 55 Inch 4K UHD</h3>
+      <p class="deal-price">Deal Price: ₹50,999</p>
+      <p class="old-price">M.R.P: ₹89,999</p>
+      <span class="deal-btn">View Deal →</span>
+    </a>
+
+  </div>
+
+  <div class="deal-info">
+    <strong>Deal prices include coupons & bank offers — may change anytime</strong><br>
+✔ Updated daily
+  </div>
+
+</section>
