@@ -1,0 +1,305 @@
+<style>
+
+/* SECTION */
+.daily-essentials-section {
+    padding: 20px;
+    background: #f3f5f7;
+    border-radius: 14px;
+    position: relative;
+    overflow: visible;
+}
+
+/* TITLE */
+.section-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* STRIP */
+.grocery-strip {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    padding: 10px 12px;
+    margin-left: 6px;
+
+    scroll-snap-type: x mandatory;
+}
+
+.grocery-strip::-webkit-scrollbar {
+    display: none;
+}
+
+/* CARD */
+.product-card {
+    min-width: 210px;
+    flex: 0 0 auto;
+
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 14px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    border: 1px solid #eee;
+
+    text-align: center;
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+    scroll-snap-align: start;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.image-wrap {
+    position: relative;
+}
+
+.product-card img {
+    height: 130px;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* BADGE */
+.discount-badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: #ff2e2e;
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* TEXT */
+.title {
+    font-size: 14px;
+    margin: 10px 0 6px;
+    min-height: 36px;
+    line-height: 1.3;
+}
+
+.price {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.mrp {
+    text-decoration: line-through;
+    font-size: 13px;
+    color: #888;
+    margin-left: 5px;
+}
+
+/* BUTTON */
+.deal-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 14px;
+    background: #ff7a00;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+/* 🔥 PREMIUM VISIBLE ARROWS */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+
+    background: #ff7a00; /* 🔥 ORANGE BRAND */
+    color: #fff;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* POSITION */
+.scroll-btn.left { left: -10px; }
+.scroll-btn.right { right: -10px; }
+
+/* HOVER */
+.scroll-btn:hover {
+    background: #e96a00;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* TRUST BOX */
+.trust-box {
+    margin-top: 16px;
+    background: #fff3e6;
+    border-left: 4px solid #ff7a00;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 8px;
+    color: #555;
+
+    display: inline-block;   /* 🔥 KEY FIX */
+    max-width: 520px;        /* optional control */
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+    .grocery-strip {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .product-card {
+        min-width: 48%; /* 2 cards visible */
+    }
+
+    .scroll-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+</style>
+
+
+<div class="daily-essentials-section">
+
+<h2 class="section-title">Daily Essentials</h2>
+
+<button class="scroll-btn left">&#10094;</button>
+<button class="scroll-btn right">&#10095;</button>
+
+<div class="grocery-strip" id="groceryStrip">
+
+<!-- 1 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/anveshan-wood-cold-pressed-groundnut-oil/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/anveshan-groundnut-oil-1l.jpg">
+<span class="discount-badge">18% OFF</span>
+</div>
+<p class="title">Wood Cold Pressed Groundnut Oil</p>
+<p class="price">₹349 <span class="mrp">₹425</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+<!-- 2 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/dabur-honey-1kg/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/dabur-honey-1kg.jpg">
+<span class="discount-badge">21% OFF</span>
+</div>
+<p class="title">Dabur Honey 1kg</p>
+<p class="price">₹390 <span class="mrp">₹495</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+<!-- 3 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/daawat-rozana-super-basmati-rice-5kg/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/daawat-rozana-basmati-rice-5kg.jpg">
+<span class="discount-badge">30% OFF</span>
+</div>
+<p class="title">Basmati Rice 5kg</p>
+<p class="price">₹349 <span class="mrp">₹495</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+<!-- 4 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/continental-lemon-iced-tea-powder/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/continental-lemon-iced-tea-powder.jpg">
+<span class="discount-badge">50% OFF</span>
+</div>
+<p class="title">Iced Tea Powder</p>
+<p class="price">₹110 <span class="mrp">₹220</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+<!-- 5 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/tata-tea-gold-1kg/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/tata-tea-gold-1kg.jpg">
+<span class="discount-badge">5% OFF</span>
+</div>
+<p class="title">Tata Tea Gold 1kg</p>
+<p class="price">₹514 <span class="mrp">₹540</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+<!-- 6 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/tata-himalayan-rock-pink-salt-1kg/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/tata-himalayan-pink-salt-1kg.jpg">
+<span class="discount-badge">9% OFF</span>
+</div>
+<p class="title">Rock Pink Salt 1kg</p>
+<p class="price">₹109 <span class="mrp">₹120</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+<!-- 7 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/ariel-liquid-detergent-front-load-4kg/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/ariel-liquid-detergent-front-load-4kg.jpg">
+<span class="discount-badge">21% OFF</span>
+</div>
+<p class="title">Ariel Power Gel 4kg</p>
+<p class="price">₹676 <span class="mrp">₹855</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+<!-- 8 -->
+<div class="product-card" onclick="location.href='https://badrideals.com/product/aashirvaad-pure-cow-ghee/'">
+<div class="image-wrap">
+<img src="https://badrideals.com/wp-content/uploads/2026/04/aashirvaad-pure-cow-ghee.jpg">
+<span class="discount-badge">33% OFF</span>
+</div>
+<p class="title">Pure Cow Ghee 1L</p>
+<p class="price">₹1010 <span class="mrp">₹1499</span></p>
+<span class="deal-btn">View Deal</span>
+</div>
+
+</div>
+
+<div class="trust-box">
+<strong>Deals updated daily. Prices may change — check before buying.</strong>
+</div>
+
+</div>
+
+
+<script>
+const container = document.getElementById('groceryStrip');
+
+document.querySelector('.scroll-btn.left').onclick = () => {
+    container.scrollBy({ left: -320, behavior: 'smooth' });
+};
+
+document.querySelector('.scroll-btn.right').onclick = () => {
+    container.scrollBy({ left: 320, behavior: 'smooth' });
+};
+</script>
